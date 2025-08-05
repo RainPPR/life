@@ -1,0 +1,105 @@
+.heroBanner {
+  padding: 8rem 0;
+  min-height: calc(100vh - 60px); /* 60px 是导航栏默认高度 */
+  background-color: #1c1c1e;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* --- 左侧内容 --- */
+.heroLeft {
+  flex: 1;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.heroDescription {
+  font-size: 24px;
+  max-width: 500px;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.heroButton {
+  background-color: #374151;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.heroButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+  color: white;
+  text-decoration: none;
+}
+
+/* --- 右侧图片 --- */
+.heroRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  max-width: 320px;
+  width: 100%;
+  filter: drop-shadow(0 0 80px rgba(124,188,255,0.6));
+}
+
+/* --- 响应式设计 --- */
+@media (max-width: 996px) {
+  .heroBanner {
+    padding: 4rem 0;
+    text-align: center;
+  }
+  .heroContainer {
+    flex-direction: column-reverse;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .heroRight {
+    margin-bottom: 3rem;
+  }
+  .heroTitle {
+    font-size: 48px;
+  }
+  .heroDescription {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .heroImage {
+    max-width: 280px;
+  }
+}
